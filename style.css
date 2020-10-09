@@ -1,0 +1,11 @@
+ieldset { border: 2px ridge #ff00;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 320px;
+  	   }
+label { font-family: Arial, sans-serif;
+font-weight:bold }
+legend { display: block;
+  font-family: Georgia,"Times New Roman", serif;
+  font-weight:bold;
+                }
