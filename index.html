@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.7.0/modern-normalize.min.css">
-
+    <script src="./scripts.js"></script>
     <!-- TODO: Add some Google Fonts -->
 
     <link rel="stylesheet" href="style.css">
@@ -14,36 +14,46 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Trust the process</h1>
-<form method="get">
-<label>Name:<br> <input type="text" name="fname" id="fname"></label><br><br>
-<label>E-mail:<br> <input type="text" name="email" id="email"></label><br><br>
-<fieldset>
-<legend> Weigth training program:</legend><br><br>
-<label><input type="checkbox" name="fat loss" id="fat loss">fat loss</label><br>
-<label><input type="checkbox" name="Weight gain" id="Weight gain">Weight gain</label><br>
-<label><input type="checkbox" name="Cutting muscle" id="Cutting muscle">Cutting muscle</label><br>
-<label><input type="checkbox" name="Endurance" id="Endurance">Endurance</label><br>
-<label><input type="checkbox" name="Explosiveness" id="Explosiveness">Explosiveness</label><br>
-<label><input type="checkbox" name="Strenght" id="Strength">Strength</label><br><br>
-</fieldset>
-<fieldset>
-<legend>How often do you workout or excersice:</legend><br><br>
-<label><input type="radio" name="None at all" id="None at all">None at all</label><br>
-<label><input type="radio" name="1 or 2 times a week" id=" or 2 times a week">1 or 2 times a week</label><br>
-<label><input type="radio" name="2 or 4 times a week" id="2 or 4 times a week">2 or 4 times a week</label><br>
-<label><input type="radio" name="5 or more times a week" id="5 or more times a week">5 or more times a week</label><br><br>
-</fieldset>
-<legend>Select the locations you workout:</legend><br><br>
-<select size="3" name="Locations to workout" id="Locations to workout">
-<option value="at home">at home</option>
-<option value="In the gym">In the gym</option>
-<option value="Excercise park">Excercise park</option>
-</select><br><br>
-<label>What role does excercise  play in your life?</label><br><br>
-<textarea name="comments" id="comments" rows="3" cols="60"></textarea><br><br>
+    <h1>Trinity gym records</h1>
+    <main>
+    <p id="avgBench"></p><br>
+    <p id="avgSquat"></p><br>
+    <p id="avgDeadlift"></p><br>
+    <table id="record-table">
+      <thead>
+        <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Age</td>
+        <td>Bench press</td>
+        <td>Squat</td>
+        <td>Deadlift</td>
+        </tr>
+      </thead>
+      <tbody>
+
+      </tbody>
+    </table>
+
+<form id="gym_records">
+<label>Name:<br> <input type="text" name="name" id="name" required></label><br><br>
+<label>Age:<br> <input type="text" name="age" id="age" required></label><br><br>
+<label>Bench press :<br> <input type="number" name="benchpress" id="benchpress" min= "0" max="900" required> lbs</label><br><br>
+<label>Squat :<br> <input type="number" name="squat" id="squat" min="0" max="1020" required> lbs</label><br><br>
+<label>Deadlift:<br> <input type="number" name="deadlift" id="deadlift"  min= "0" max="1045" required> lbs</label><br><br>
 <input type="submit" value="Submit"> <input type="reset">
-    <!-- 'Connect' JS to this HTML file. -->
-    <script src="./scripts.js"></script>
+    </form>
+  </main>
+  <template id="member-row">
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </template>
+  <script src="./scripts.js" type="module"></script>
   </body>
 </html>
