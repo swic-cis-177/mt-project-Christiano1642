@@ -1,11 +1,74 @@
-ieldset { border: 2px ridge #ff00;
-  margin-bottom: 10px;
-  padding: 10px;
-  width: 320px;
-  	   }
-label { font-family: Arial, sans-serif;
-font-weight:bold }
-legend { display: block;
-  font-family: Georgia,"Times New Roman", serif;
-  font-weight:bold;
-                }
+body {
+  background: #8ce0ce;
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0 auto;
+  width: 550px ;
+
+}
+
+h1,
+#avg,
+button,
+thead {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+#avg {
+  font-size: 3em;
+  margin: 0;
+  text-align: center;
+}
+
+div {
+  padding: 0.5rem 0;
+}
+
+
+form button {
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover:not(:focus) {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+table {
+  border-collapse: collapse;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+tbody tr:nth-child(odd) {
+  background: whitesmoke;
+}
+
+td {
+  margin: 0;
+  padding: 0.25rem;
+}
+
+td:nth-child(3) {
+  text-align: center;
+}
+
+form {
+  border-top: solid thin gray;
+  margin-bottom: 10vmin;
+}
+
+label {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
