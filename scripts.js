@@ -1,4 +1,4 @@
-import{generateRecord, createRecord, displayAvg} from "./lib.js";
+import{generateRecord, createRecord, displayAvg} from "./index.js";
 
 
 const render =(recordData) =>{
