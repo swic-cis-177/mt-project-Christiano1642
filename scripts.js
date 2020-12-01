@@ -1,13 +1,14 @@
-const form = document.querySelector("form");
+import{generateRecord, createRecord, displayAvg} from "./lib.js";
 
-form.addEventListener("submit", function () {
+
+const render =(recordData) =>{
+  createRecord(recordData);
+  displayAvg(recordData);
+};
+render(data);
+document.querySelector("form").addEventListener("submit"), (event) =>{
   event.preventDefault();
 
-  const formData = {};
-  for (let i = 0; i <= 6; i++) {
-    formData[event.target.elements[i].id] = event.target.elements[i].value;
-    console.log(formData);
-  }
-
-  console.log(formData);
+  data.push(generateRecord(event.target.element));
+  render (data);
 });
