@@ -13,6 +13,14 @@ const calcAvg = (recordData) =>
     return ret;
   }, 0) / recordData.length;
 
+/**
+ * Extract the values of a specific exercise, making sure that they are numbers
+ * @param {string} exerciseName
+ * @returns {[Number]}
+ */
+const extractNumericalValues = (dataSet, prop) =>
+  dataSet.map((data) => Number(data[prop]));
+
 const generateRandomId = () =>
   Math.floor(Math.random() * (2000000 - 1000000 + 1) + 1000000);
 
@@ -46,7 +54,11 @@ export const createRecordTable = (recordData) => {
 };
 
 export const displayAvg = (recordData) => {
-  p.innerText = calcAvg(recordData);
+  // Filter out the records for each type
+  const benchValues = extractNumericalValues(recordData, "benchpress");
+
+  console.log(benchValues, "hi");
+  avgBench.innerText = calcAvg(benchValues);
 };
 
 export const generateRecord = (elements) => ({
