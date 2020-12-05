@@ -1,14 +1,15 @@
-import{generateRecord, createRecord, displayAvg} from "./index.js";
+import { generateRecord, createRecordTable, displayAvg } from "./index.js";
 
+const data = [];
 
-const render =(recordData) =>{
-  createRecord(recordData);
+const render = (recordData) => {
+  createRecordTable(recordData);
   displayAvg(recordData);
 };
-render(data);
-document.querySelector("form").addEventListener("submit"), (event) =>{
+
+document.querySelector("form").addEventListener("submit", (event) => {
   event.preventDefault();
 
-  data.push(generateRecord(event.target.element));
-  render (data);
+  data.push(generateRecord(event.target.elements));
+  render(data);
 });
