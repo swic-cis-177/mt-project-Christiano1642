@@ -3,33 +3,11 @@ const tbody = document.querySelector("tbody");
 const template = document.querySelector("template");
 
 const calcAvg = (recordData) =>
-  recordData.reduce(
-    (total, { benchpress }) => {
-      let ret = total;
-      ret += Number(benchpress);
-      return ret;
-    },
-    (
-      total,
-
-      { squat }
-    ) => {
-      let ret = total;
-      ret += Number(squat);
-      return ret;
-    },
-    (
-      total,
-
-      { deadlift }
-    ) => {
-      let ret = total;
-      ret += Number(deadlift);
-      return ret;
-    },
-
-    0
-  ) / recordData.length;
+  recordData.reduce((total, num) => {
+    let ret = total;
+    ret += num;
+    return ret;
+  }, 0) / recordData.length;
 
 const generateRandomId = () =>
   Math.floor(Math.random() * (2000000 - 1000000 + 1) + 1000000);
