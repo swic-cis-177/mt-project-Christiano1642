@@ -2,6 +2,10 @@ const p = document.querySelector("p");
 const tbody = document.querySelector("tbody");
 const template = document.querySelector("template");
 
+const avgBench = document.querySelector("#avgBench");
+const avgSquat = document.querySelector("#avgSquat");
+const avgDeadift = document.querySelector("#avgDeadift");
+
 const calcAvg = (recordData) =>
   recordData.reduce((total, num) => {
     let ret = total;
