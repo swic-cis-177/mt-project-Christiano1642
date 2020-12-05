@@ -56,9 +56,9 @@ export const createRecordTable = (recordData) => {
     newStudentTDs[0].textContent = id;
     newStudentTDs[1].textContent = name;
     newStudentTDs[2].textContent = age;
-    newStudentRow[3].textContent = benchpress;
-    newStudentRow[4].textContent = squat;
-    newStudentRow[5].textContent = deadlift;
+    newStudentTDs[3].textContent = benchpress;
+    newStudentTDs[4].textContent = squat;
+    newStudentTDs[5].textContent = deadlift;
     tbody.appendChild(newStudentRow);
   });
 };

@@ -1,4 +1,4 @@
-import { generateRecord, createRecordTable, displayAvg } from "./index.js";
+import { generateRecord, createRecordTable, displayAvg } from "./lib.js";
 
 const data = [];
 
