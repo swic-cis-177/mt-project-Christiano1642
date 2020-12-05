@@ -4,56 +4,99 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.7.0/modern-normalize.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.7.0/modern-normalize.min.css"
+    />
     <script src="./scripts.js"></script>
-    
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
-   
     <title>Trinity Gym</title>
   </head>
   <body>
     <h1>Trinity gym records</h1>
     <main>
-    <p id="avgBench"></p><br>
-    <p id="avgSquat"></p><br>
-    <p id="avgDeadlift"></p><br>
-    <table id="record-table">
-      <thead>
-        <tr>
-        <td>ID</td>
-        <td>Name</td>
-        <td>Age</td>
-        <td>Bench press</td>
-        <td>Squat</td>
-        <td>Deadlift</td>
-        </tr>
-      </thead>
-      <tbody>
+      <p id="avgBench"></p>
+      <br />
+      <p id="avgSquat"></p>
+      <br />
+      <p id="avgDeadlift"></p>
+      <br />
+      <table id="record-table">
+        <thead>
+          <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Age</td>
+            <td>Bench press</td>
+            <td>Squat</td>
+            <td>Deadlift</td>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
 
-      </tbody>
-    </table>
+      <form id="gym_records">
+        <!-- TODO{christian}: Consider replacing 'br' with CSS for proper margin and formatting. (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br) -->
+        <label
+          >Name:<br />
+          <input type="text" name="name" id="name" required /></label
+        ><br /><br />
+        <label
+          >Age:<br />
+          <input type="text" name="age" id="age" required /></label
+        ><br /><br />
+        <label
+          >Bench press :<br />
+          <input
+            type="number"
+            name="benchpress"
+            id="benchpress"
+            min="0"
+            max="900"
+            required
+          />
+          lbs</label
+        ><br /><br />
+        <label
+          >Squat :<br />
+          <input
+            type="number"
+            name="squat"
+            id="squat"
+            min="0"
+            max="1020"
+            required
+          />
+          lbs</label
+        ><br /><br />
+        <label
+          >Deadlift:<br />
+          <input
+            type="number"
+            name="deadlift"
+            id="deadlift"
+            min="0"
+            max="1045"
+            required
+          />
+          lbs</label
+        ><br /><br />
+        <input type="submit" value="Submit" /> <input type="reset" />
+      </form>
+    </main>
 
-<form id="gym_records">
-<label>Name:<br> <input type="text" name="name" id="name" required></label><br><br>
-<label>Age:<br> <input type="text" name="age" id="age" required></label><br><br>
-<label>Bench press :<br> <input type="number" name="benchpress" id="benchpress" min= "0" max="900" required> lbs</label><br><br>
-<label>Squat :<br> <input type="number" name="squat" id="squat" min="0" max="1020" required> lbs</label><br><br>
-<label>Deadlift:<br> <input type="number" name="deadlift" id="deadlift"  min= "0" max="1045" required> lbs</label><br><br>
-<input type="submit" value="Submit"> <input type="reset">
-    </form>
-  </main>
-  <template id="member-row">
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-  </template>
-  <script src="./scripts.js" type="module"></script>
+    <template id="member-row">
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </template>
+    <script src="./scripts.js" type="module"></script>
   </body>
 </html>
