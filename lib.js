@@ -4,7 +4,7 @@ const template = document.querySelector("template");
 
 const avgBench = document.querySelector("#avgBench");
 const avgSquat = document.querySelector("#avgSquat");
-const avgDeadift = document.querySelector("#avgDeadift");
+const avgDeadLift = document.querySelector("#avgDeadLift");
 
 const calcAvg = (recordData) =>
   recordData.reduce((total, num) => {
@@ -40,25 +40,31 @@ const processForm = (elements) =>
 export const createRecordTable = (recordData) => {
   tbody.innerHTML = null;
   recordData.forEach(({ name, age, benchpress, squat, deadlift, id }) => {
-    const newStudentRow = template.content.cloneNode(true);
-    const newStudentTDs = newStudentRow.querySelectorAll("td");
+    const newLifterRow = template.content.cloneNode(true);
+    const newLifterTDs = newLifterRow.querySelectorAll("td");
 
-    newStudentTDs[0].textContent = id;
-    newStudentTDs[1].textContent = name;
-    newStudentTDs[2].textContent = age;
-    newStudentTDs[3].textContent = benchpress;
-    newStudentTDs[4].textContent = squat;
-    newStudentTDs[5].textContent = deadlift;
-    tbody.appendChild(newStudentRow);
+    newLifterTDs[0].textContent = id;
+    newLifterTDs[1].textContent = name;
+    newLifterTDs[2].textContent = age;
+    newLifterTDs[3].textContent = benchpress;
+    newLifterTDs[4].textContent = squat;
+    newLifterTDs[5].textContent = deadlift;
+    tbody.appendChild(newLifterRow);
   });
 };
 
 export const displayAvg = (recordData) => {
   // Filter out the records for each type
   const benchValues = extractNumericalValues(recordData, "benchpress");
-
+  const squatValues = extractNumericalValues(recordData, "squat")
+  const deadliftValues = extractNumericalValues(recordData, "deadlift")
+  console.log(squatValues,"hi");
+  console.log(deadliftValues,"hi");
   console.log(benchValues, "hi");
   avgBench.innerText = calcAvg(benchValues);
+  avgSquat.innerText = calcAvg(squatValues);
+  avgDeadLift.innerText = calcAvg (deadliftValues);
+
 };
 
 export const generateRecord = (elements) => ({
